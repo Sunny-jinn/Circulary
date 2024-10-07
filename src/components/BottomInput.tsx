@@ -50,16 +50,20 @@ export const BottomInput = () => {
 
   const handleClick = () => {
     if (inputRef.current && inputRef.current.value !== '') {
-      //   setIsModalOpen(true)
-      setIsNameModalOpen(true)
+      setIsModalOpen(true)
     }
   }
 
   const handleModalClick = () => {
     if (inputRef.current && inputRef.current.value !== '') {
       setUsername(inputRef.current.value)
-      inputRef.current.value = ''
+      setIsNameModalOpen(true)
     }
+  }
+
+  const handleClose = () => {
+    setIsNameModalOpen(false)
+    inputRef.current!.value = ''
   }
 
   return (
@@ -80,7 +84,7 @@ export const BottomInput = () => {
       <TempNameModal
         username={inputRef.current?.value ?? ' '}
         isOpen={isNameModalOpen}
-        onClose={() => setIsNameModalOpen(false)}
+        onClose={handleClose}
       />
     </BottomContainer>
   )

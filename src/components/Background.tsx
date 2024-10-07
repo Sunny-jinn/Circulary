@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { keyframes } from '@emotion/react' // keyframes는 @emotion/react에서 가져와야 합니다
+import { keyframes } from '@emotion/react'
 import { UsernameLists } from './UsernameLists'
 import { RightBanner } from './RightBanner'
 import { LeftBanner } from './LeftBanner'
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100%;
   background-color: #1b1b1b;
-  overflow: hidden; /* 별들이 벗어나지 않게 함 */
+  overflow: hidden;
 `
 
 const moveStars = keyframes`
@@ -32,7 +32,7 @@ const Star = styled.div<{ size: number }>`
   border-radius: 50%;
   top: 100%;
   left: ${() => Math.random() * 100}vw;
-  animation: ${moveStars} ${() => Math.random() * 10 + 15}s linear infinite;
+  animation: ${moveStars} ${() => Math.random() * 10 + 30}s linear infinite;
   opacity: ${() => Math.random()};
   z-index: 9;
 `
@@ -47,10 +47,11 @@ const generateStars = (count: number) => {
 export const Background = () => {
   return (
     <Wrapper>
-      {generateStars(50)}
+      {generateStars(30)}
       <LeftBanner />
       <UsernameLists />
       <RightBanner />
+      {generateStars(30)}
       <BottomInput />
     </Wrapper>
   )

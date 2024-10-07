@@ -4,7 +4,6 @@ import useUserStore from '../store'
 import logo from '../assets/imgs/circulary_logo.svg'
 import { useState } from 'react'
 
-// 무한히 반복되는 위에서 아래로 내려가는 애니메이션 정의
 const scrollAnimation = keyframes`
   0% {
     transform: translateY(-50%);
@@ -42,7 +41,7 @@ const Scroller = styled.div<{ animationDuration: number }>`
   display: flex;
   flex-direction: column;
   animation: ${scrollAnimation} ${({ animationDuration }) => animationDuration}s
-    linear infinite; /* 동적 애니메이션 시간 적용 */
+    linear infinite;
 `
 
 const UserLists = styled.div`
@@ -59,7 +58,7 @@ export const UsernameLists = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [baseDuration, setBaseDuration] = useState<number>(15)
 
-  const additionalDuration = Math.floor(username.length / 7) // 7마다 1초씩 추가
+  const additionalDuration = Math.floor(username.length / 4)
   const animationDuration = baseDuration + additionalDuration
 
   return (
