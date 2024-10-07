@@ -1,8 +1,12 @@
+import { Background } from './components/Background'
+import { Header } from './components/Header'
+
 const App = () => {
   return (
-    <div>
-      <div>Circulary</div>
-    </div>
+    <>
+      <Header />
+      <Background />
+    </>
   )
 }
 
