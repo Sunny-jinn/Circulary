@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'Helvetica_Black';
+  src: url('/src/assets/fonts/Helvetica-LT-93-Black-Extended.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: 900;
+}
+
+.ko {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.en {
+  font-family: 'Helvetica_Black';
+}
+
 html,
 body,
 p,
@@ -47,6 +65,7 @@ select {
   padding: 0;
   outline: none;
   cursor: pointer;
+  background: none;
 }
 
 html {

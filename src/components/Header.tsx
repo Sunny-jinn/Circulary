@@ -2,12 +2,15 @@ import styled from '@emotion/styled'
 import { Colors } from '../styles/colors'
 
 const Wrapper = styled.header`
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 65px;
   background-color: ${Colors.GREEN_100};
   overflow: hidden;
   display: flex;
   align-items: center;
+  z-index: 99999;
 `
 
 const MovingText = styled.div`
@@ -16,6 +19,9 @@ const MovingText = styled.div`
   white-space: nowrap;
   animation: moveText 20s linear infinite;
   width: max-content;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 33.6px;
 
   @keyframes moveText {
     0% {
@@ -33,7 +39,7 @@ const MovingText = styled.div`
 
 export const Header = () => {
   return (
-    <Wrapper>
+    <Wrapper className='en'>
       <MovingText>
         <span>Member's Hall of Fame</span>
         <span>Member's Hall of Fame</span>
