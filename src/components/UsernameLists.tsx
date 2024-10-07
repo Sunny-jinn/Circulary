@@ -56,8 +56,7 @@ const UserLists = styled.div`
 export const UsernameLists = () => {
   const { username } = useUserStore()
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [baseDuration, setBaseDuration] = useState<number>(15)
+  const [baseDuration] = useState<number>(15)
 
   const additionalDuration = Math.floor(username.length / 2)
   const animationDuration = baseDuration + additionalDuration
