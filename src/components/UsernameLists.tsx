@@ -47,6 +47,7 @@ const Scroller = styled.div<{ animationDuration: number }>`
 const UserLists = styled.div`
   display: flex;
   justify-content: center;
+  min-height: 115px;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 100px;
@@ -58,7 +59,7 @@ export const UsernameLists = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [baseDuration, setBaseDuration] = useState<number>(15)
 
-  const additionalDuration = Math.floor(username.length / 4)
+  const additionalDuration = Math.floor(username.length / 2)
   const animationDuration = baseDuration + additionalDuration
 
   return (

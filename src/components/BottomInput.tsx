@@ -73,6 +73,7 @@ export const BottomInput = () => {
         type='text'
         className='ko'
         placeholder='닉네임을 입력하세요.'
+        maxLength={10}
       />
       <Image src={icon_add} alt='+' onClick={handleClick} />
       <Modal

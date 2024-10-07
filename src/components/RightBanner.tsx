@@ -149,10 +149,10 @@ export const RightBanner = () => {
           </button>
         </BannerHeader>
         <BannerContent>
-          {username.map((item, idx) => (
-            <div key={idx}>
-              {item !== ' ' && (
-                <UsernameCard>
+          {username.map(
+            (item, idx) =>
+              item !== ' ' && (
+                <UsernameCard key={idx}>
                   <img
                     src={icon_delete_small}
                     alt=''
@@ -160,9 +160,8 @@ export const RightBanner = () => {
                   />
                   <span>{item}</span>
                 </UsernameCard>
-              )}
-            </div>
-          ))}
+              )
+          )}
         </BannerContent>
       </Banner>
     </>
