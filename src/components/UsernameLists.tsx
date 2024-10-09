@@ -6,10 +6,10 @@ import { useState } from 'react'
 
 const scrollAnimation = keyframes`
   0% {
-    transform: translateY(-50%);
+    transform: translateY(0%);
   }
   100% {
-    transform: translateY(0);
+    transform: translateY(-50%);
   }
 `
 

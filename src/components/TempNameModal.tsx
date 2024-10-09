@@ -6,7 +6,7 @@ const Overlay = styled.div<{ isVisible: boolean }>`
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 1000px;
+  width: 100%;
   background: rgba(27, 27, 27, 0.6);
   height: 100vh;
   display: flex;
@@ -19,7 +19,6 @@ const Overlay = styled.div<{ isVisible: boolean }>`
 
 const Wrapper = styled.div`
   position: relative;
-  width: 411px;
   height: 207px;
   border-radius: 8px;
   display: flex;
